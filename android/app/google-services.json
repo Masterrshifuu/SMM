@@ -1,0 +1,222 @@
+{
+  "project_info": {
+    "project_number": "532231020344",
+    "project_id": "gai-sangma",
+    "storage_bucket": "gai-sangma.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532231020344:android:ce39140ce85eb619486bcd",
+        "android_client_info": {
+          "package_name": "com.SMM.sangmameghamart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532231020344-0qonrjkdb70pjtg83g5m8oj3m62nfbei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.SMM.sangmameghamart",
+            "certificate_hash": "d5e4b541c0ef0833be288c030de0281e2d991553"
+          }
+        },
+        {
+          "client_id": "532231020344-s40bgs3cb92o62erjnru6611ih7j7q6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.SMM.sangmameghamart",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtCt03YPKR3v6k3L3ymNQLK-dDP4_ZveA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "532231020344-1eln45sukiaugbhai6cs2pr2l3drt5a9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sangmameghamart.myapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532231020344:android:b886cc59afc2d2cb486bcd",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtCt03YPKR3v6k3L3ymNQLK-dDP4_ZveA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "532231020344-1eln45sukiaugbhai6cs2pr2l3drt5a9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sangmameghamart.myapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532231020344:android:8c687dae2b73f5a2486bcd",
+        "android_client_info": {
+          "package_name": "com.example.sangmameghamart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532231020344-capj96po98o89hids2n5fkgmsp17cbh1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sangmameghamart",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtCt03YPKR3v6k3L3ymNQLK-dDP4_ZveA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "532231020344-1eln45sukiaugbhai6cs2pr2l3drt5a9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sangmameghamart.myapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532231020344:android:9d7b1c29a458a8ac486bcd",
+        "android_client_info": {
+          "package_name": "com.example.smm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtCt03YPKR3v6k3L3ymNQLK-dDP4_ZveA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "532231020344-1eln45sukiaugbhai6cs2pr2l3drt5a9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sangmameghamart.myapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532231020344:android:74d8dffff31b18cd486bcd",
+        "android_client_info": {
+          "package_name": "com.mycompany.aifooddeliveryappuikit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532231020344-i39ok5k6gbrgnsmla3q4lor6462onhsa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.aifooddeliveryappuikit",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtCt03YPKR3v6k3L3ymNQLK-dDP4_ZveA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532231020344-mlofblnu23979e1t2469414bft7tkseh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "532231020344-1eln45sukiaugbhai6cs2pr2l3drt5a9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sangmameghamart.myapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
