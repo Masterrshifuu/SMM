@@ -104,7 +104,7 @@ class ProductDetailScreen extends StatelessWidget {
                   child: ListView.separated(
                     scrollDirection: Axis.horizontal,
                     itemCount: similarProducts.length,
-                    separatorBuilder: (_, __) => const SizedBox(width: 8),
+                    separatorBuilder: (_, _) => const SizedBox(width: 8),
                     itemBuilder: (context, i) {
                       final p = similarProducts[i];
                       return _MiniProductCard(product: p);
@@ -120,7 +120,7 @@ class ProductDetailScreen extends StatelessWidget {
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: featuredProducts.length > 10 ? 10 : featuredProducts.length,
-                  separatorBuilder: (_, __) => const SizedBox(width: 8),
+                  separatorBuilder: (_, _) => const SizedBox(width: 8),
                   itemBuilder: (context, i) {
                     final p = featuredProducts[i];
                     return _MiniProductCard(product: p);

@@ -4,7 +4,19 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthProvider with ChangeNotifier {
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  User? _user;
+
+  User? get user => _user;
+
+  AuthProvider() {
+    _auth.authStateChanges().listen((User? user) {
+      _user = user;
+      notifyListeners();
+    });
+  }
+
   Future<void> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
@@ -13,7 +25,7 @@ class AuthProvider with ChangeNotifier {
         return;
       }
       final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-      final credential = GoogleAuthProvider.credential(
+      final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
@@ -28,17 +40,6 @@ class AuthProvider with ChangeNotifier {
     } catch (e) {
       // Handle error
     }
-  }
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-  User? _user;
-
-  User? get user => _user;
-
-  AuthProvider() {
-    _auth.authStateChanges().listen((User? user) {
-      _user = user;
-      notifyListeners();
-    });
   }
 
   Future<void> signIn(String email, String password) async {
@@ -64,6 +65,7 @@ class AuthProvider with ChangeNotifier {
   }
 
   Future<void> signOut() async {
+    await _googleSignIn.signOut();
     await _auth.signOut();
   }
 }

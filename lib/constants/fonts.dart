@@ -4,7 +4,7 @@ class AppFonts {
   static const String poppins = 'Poppins';
   static const String ptSans = 'PTSans';
 
-  // Font weights
+  // Font wAeights
   static const FontWeight regular = FontWeight.w400;
   static const FontWeight semiBold = FontWeight.w600;
   static const FontWeight bold = FontWeight.w700;

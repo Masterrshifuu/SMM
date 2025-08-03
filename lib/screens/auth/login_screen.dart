@@ -47,12 +47,12 @@ class LoginScreenState extends State<LoginScreen> {
                       Tab(text: 'Sign Up'),
                     ],
                   ),
-                  const SizedBox(
-                    height: 250, // Give the TabBarView a specific height
+                  SizedBox(
+                    height: 400, // Give the TabBarView a specific height
                     child: TabBarView(
                       children: [
-                        SignInForm(),
-                        SignupForm(),
+                        SingleChildScrollView(child: SignInForm()),
+                        SingleChildScrollView(child: SignupForm()),
                       ],
                     ),
                   )
@@ -88,18 +88,23 @@ class _SignInFormState extends State<SignInForm> {
       setState(() {
         _isLoading = true;
       });
+
+      final navigator = Navigator.of(context);
+      final scaffoldMessenger = ScaffoldMessenger.of(context);
+      final theme = Theme.of(context);
+
       try {
         await Provider.of<AuthProvider>(context, listen: false)
             .signIn(_email, _password);
         if (!mounted) return;
-        Navigator.of(context).pushReplacement(
+        navigator.pushReplacement(
             MaterialPageRoute(builder: (context) => const MainNavScreen()));
       } catch (error) {
         if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(
+        scaffoldMessenger.showSnackBar(
           SnackBar(
             content: Text(error.toString()),
-            backgroundColor: Theme.of(context).colorScheme.error,
+            backgroundColor: theme.colorScheme.error,
           ),
         );
       } finally {
@@ -186,6 +191,60 @@ class _SignInFormState extends State<SignInForm> {
                   ),
                 ),
               ),
+            const SizedBox(height: 16),
+            GestureDetector(
+              onTap: () async {
+                final navigator = Navigator.of(context);
+                final scaffoldMessenger = ScaffoldMessenger.of(context);
+                final theme = Theme.of(context);
+                try {
+                  await Provider.of<AuthProvider>(context, listen: false)
+                      .signInWithGoogle();
+                  if (!mounted) return;
+                  navigator.pushReplacement(
+                      MaterialPageRoute(builder: (context) => const MainNavScreen()));
+                } catch (error) {
+                  if (!mounted) return;
+                  scaffoldMessenger.showSnackBar(
+                    SnackBar(
+                      content: Text(error.toString()),
+                      backgroundColor: theme.colorScheme.error,
+                    ),
+                  );
+                }
+              },
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withAlpha((255 * 0.5).round()),
+                      spreadRadius: 1,
+                      blurRadius: 3,
+                      offset: const Offset(0, 2),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/googlelogo.png', height: 24),
+                    const SizedBox(width: 12),
+                    const Text(
+                      'Sign in with Google',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -216,18 +275,23 @@ class _SignupFormState extends State<SignupForm> {
       setState(() {
         _isLoading = true;
       });
+
+      final navigator = Navigator.of(context);
+      final scaffoldMessenger = ScaffoldMessenger.of(context);
+      final theme = Theme.of(context);
+
       try {
         await Provider.of<AuthProvider>(context, listen: false)
             .signUp(_email, _password, _fullName);
         if (!mounted) return;
-        Navigator.of(context).pushReplacement(
+        navigator.pushReplacement(
             MaterialPageRoute(builder: (context) => const MainNavScreen()));
       } catch (error) {
         if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(
+        scaffoldMessenger.showSnackBar(
           SnackBar(
             content: Text(error.toString()),
-            backgroundColor: Theme.of(context).colorScheme.error,
+            backgroundColor: theme.colorScheme.error,
           ),
         );
       } finally {
@@ -331,6 +395,60 @@ class _SignupFormState extends State<SignupForm> {
                   ),
                 ),
               ),
+            const SizedBox(height: 16),
+            GestureDetector(
+              onTap: () async {
+                final navigator = Navigator.of(context);
+                final scaffoldMessenger = ScaffoldMessenger.of(context);
+                final theme = Theme.of(context);
+                try {
+                  await Provider.of<AuthProvider>(context, listen: false)
+                      .signInWithGoogle();
+                  if (!mounted) return;
+                  navigator.pushReplacement(
+                      MaterialPageRoute(builder: (context) => const MainNavScreen()));
+                } catch (error) {
+                  if (!mounted) return;
+                  scaffoldMessenger.showSnackBar(
+                    SnackBar(
+                      content: Text(error.toString()),
+                      backgroundColor: theme.colorScheme.error,
+                    ),
+                  );
+                }
+              },
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withAlpha((255 * 0.5).round()),
+                      spreadRadius: 1,
+                      blurRadius: 3,
+                      offset: const Offset(0, 2),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/googlelogo.png', height: 24),
+                    const SizedBox(width: 12),
+                    const Text(
+                      'Sign in with Google',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
